@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habibi Kirana Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">🛒 Habibi <span>Kirana Store</span></div>
+    <button class="cart-btn" onclick="toggleCart()">
+        🛍️ Cart <span id="cart-count">0</span>
+    </button>
+</header>
+<section class="hero">
+    <div>
+        <h1>Welcome to Habibi Kirana Store</h1>
+        <p>Your daily needs, all in one place!</p>
+        <a href="#products" class="shop-btn">Shop Now →</a>
+    </div>
+</section>
+<section class="search-section">
+    <h2>Our Products 🛍️</h2>
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search rice, oil, biscuits..."
+        oninput="displayProducts()"
+    >
+    <div class="categories">
+        <button onclick="filterCategory('All')">All</button>
+        <button onclick="filterCategory('Grocery')">Grocery</button>
+        <button onclick="filterCategory('Snacks')">Snacks</button>
+        <button onclick="filterCategory('Drinks')">Drinks</button>
+        <button onclick="filterCategory('Personal Care')">Personal Care</button>
+    </div>
+</section>
+<main id="products" class="product-grid"></main>
+<section id="cart-section" class="cart-section hidden">
+    <h2>🛒 Your Shopping Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: ₹<span id="cart-total">0</span></h3>
+    <button class="whatsapp-btn" onclick="checkout()">
+        Order on WhatsApp
+    </button>
+    <button class="close-btn" onclick="toggleCart()">Continue Shopping</button>
+</section>
+<footer>
+    <h2>🛒 Habibi Kirana Store</h2>
+    <p>Your trusted shop for everyday essentials.</p>
+    <p>📍 Visit our store for your daily needs.</p>
+    <p>© 2026 Habibi Kirana Store. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

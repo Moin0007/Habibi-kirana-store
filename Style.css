@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f3;
+    color: #222;
+}
+header {
+    background: #176b42;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+.logo span {
+    display: block;
+    font-size: 13px;
+    color: #d5f5df;
+    margin-top: 4px;
+}
+.cart-btn {
+    background: white;
+    color: #176b42;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.hero {
+    min-height: 300px;
+    padding: 65px 7%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #dff5e5, #a9dfba);
+}
+.hero h1 {
+    color: #145c36;
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+.shop-btn {
+    display: inline-block;
+    background: #176b42;
+    color: white;
+    padding: 13px 22px;
+    text-decoration: none;
+    border-radius: 7px;
+}
+.search-section {
+    text-align: center;
+    padding: 35px 5% 20px;
+}
+.search-section h2 {
+    margin-bottom: 20px;
+}
+#search {
+    width: min(100%, 500px);
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline-color: #176b42;
+}
+.categories {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.categories button {
+    background: white;
+    border: 1px solid #176b42;
+    color: #176b42;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.categories button:hover {
+    background: #176b42;
+    color: white;
+}
+.product-grid {
+    padding: 25px 5% 45px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px #0000000d;
+    transition: transform 0.2s;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+}
+.product-image {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+.product-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+.product-card p {
+    color: #176b42;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.add-btn {
+    background: #176b42;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+}
+.add-btn:hover {
+    background: #104c2e;
+}
+.cart-section {
+    background: white;
+    margin: 20px 5% 40px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+}
+.cart-section h2 {
+    margin-bottom: 20px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+.cart-item button {
+    padding: 5px 9px;
+    cursor: pointer;
+}
+.cart-section h3 {
+    margin: 20px 0;
+}
+.whatsapp-btn,
+.close-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 5px 5px 5px 0;
+}
+.whatsapp-btn {
+    background: #25d366;
+    color: white;
+    font-weight: bold;
+}
+.close-btn {
+    background: #eee;
+    color: #222;
+}
+.hidden {
+    display: none;
+}
+footer {
+    background: #124b30;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    header {
+        padding: 15px 4%;
+    }
+    .logo {
+        font-size: 18px;
+    }
+    .hero {
+        padding: 50px 6%;
+        min-height: 260px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 20px 4%;
+    }
+    .product-card {
+        padding: 16px 10px;
+    }
+    .product-image {
+        font-size: 42px;
+    }
+    .cart-section {
+        margin: 15px 4%;
+        padding: 18px;
+    }
+}
